@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .cook{
+      /*width: 20%;*/
+      height:100px;
+      /*float: left;*/
+      border: 2px;
+column-width: 20%;
+    }
+    /*.cook:nth-child(4){
+      height: 200px;
+    }*/
+    .main{
+      column-count: 4;
+
+
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+    <div class="cook"></div>
+        <div class="cook"></div>
+            <div class="cook"></div>
+                <div class="cook"></div>
+                    <div class="cook"></div>
+</div>
+    <script>
+       function ramdomColor(){
+         var color = Math.floor(Math.random() * 0xFFFFFF);
+         color = '000000' + color;
+         color = color.slice(-6);
+
+         return '#' + color;
+       }
+       var divs = document.querySelectorAll('.cook');
+       for (var i =0; i< divs.length;i++){
+         divs[i].style.backgroundColor = ramdomColor();
+          // divs[i].style.bordercolor = ramdomColor();
+       }
+    </script>
+  </body>
+</html>
